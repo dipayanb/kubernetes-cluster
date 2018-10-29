@@ -89,6 +89,7 @@ $configureMaster = <<-SCRIPT
     #copying credentials to regular user - vagrant
     sudo --user=vagrant mkdir -p /home/vagrant/.kube
     cp -i /etc/kubernetes/admin.conf /home/vagrant/.kube/config
+    cp -i /etc/kubernetes/admin.conf /vagrant/.kube/config
     chown $(id -u vagrant):$(id -g vagrant) /home/vagrant/.kube/config
 
     # install Calico pod network addon
